@@ -20,10 +20,7 @@ def visualize_mask_3d(maskName: str, level: float = 0.5, opacity: float = 0.5):
         Opacity of the 3D mesh (0.0 to 1.0).
     """
 
-    # --- load mask ---
     msk_itk = sitk.ReadImage(maskName)
-
-    # Convert to binary label map (0 background, 1 ROI)
     msk_itk = sitk.Cast(msk_itk > 0, sitk.sitkUInt8)
 
     # Convert to numpy array: shape = (z, y, x)
@@ -32,13 +29,10 @@ def visualize_mask_3d(maskName: str, level: float = 0.5, opacity: float = 0.5):
     if np.count_nonzero(msk) == 0:
         raise ValueError("Mask is empty (all zeros). Nothing to visualize.")
 
-    # --- extract surface mesh ---
-    # spacing in physical units is (x, y, z), but numpy uses (z, y, x)
     spacing_zyx = msk_itk.GetSpacing()[::-1]
 
     verts, faces, _, _ = marching_cubes(msk, level=level, spacing=spacing_zyx)
 
-    # --- plot 3D mesh ---
     fig = go.Figure(
         data=[
             go.Mesh3d(

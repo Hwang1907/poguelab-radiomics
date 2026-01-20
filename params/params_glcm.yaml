@@ -1,0 +1,23 @@
+imageType:
+  Original: {}
+  Wavelet: {}
+
+featureClass:
+  glcm: []
+
+setting:
+  # discretization
+  binWidth: 10
+
+  # resampling (good for multi-scan comparability)
+  resampledPixelSpacing: [1, 1, 1]
+  interpolator: sitkBSpline
+
+  # GLCM behavior
+  distances: [1, 2, 3]
+  symmetricalGLCM: true
+  weightingNorm: euclidean
+
+  # mask/label
+  correctMask: true
+  label: 1
