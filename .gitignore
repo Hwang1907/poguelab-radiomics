@@ -1,0 +1,9 @@
+.DS_Store
+data/.DS_Store
+data/images/image_1.nii.gz
+data/images/image_2.nii.gz
+data/images/image_3.nii.gz
+data/masks/.DS_Store
+data/masks/mask_1.nii.gz
+data/masks/mask_2.nii.gz
+data/masks/mask_3.nii.gz
