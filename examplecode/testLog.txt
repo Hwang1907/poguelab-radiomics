@@ -1,6 +1,0 @@
-INFO:radiomics.featureextractor: Loading parameter file ../params/Params.yaml
-DEBUG:radiomics.featureextractor: Parameters parsed, input is valid.
-DEBUG:radiomics.featureextractor: Applying settings
-DEBUG:radiomics.featureextractor: Enabled image types: {'Original': {}}
-DEBUG:radiomics.featureextractor: Enabled features: {'shape': None, 'firstorder': [], 'glcm': ['Autocorrelation', 'JointAverage', 'ClusterProminence', 'ClusterShade', 'ClusterTendency', 'Contrast', 'Correlation', 'DifferenceAverage', 'DifferenceEntropy', 'DifferenceVariance', 'JointEnergy', 'JointEntropy', 'Imc1', 'Imc2', 'Idm', 'Idmn', 'Id', 'Idn', 'InverseVariance', 'MaximumProbability', 'SumEntropy', 'SumSquares'], 'glrlm': None, 'glszm': None, 'gldm': None}
-DEBUG:radiomics.featureextractor: Settings: {'binWidth': 25, 'label': 1, 'interpolator': 'sitkBSpline', 'resampledPixelSpacing': None, 'weightingNorm': None}
