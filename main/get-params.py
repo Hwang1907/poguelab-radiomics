@@ -65,4 +65,4 @@ def run_batch(params_path: str, n_cases: int, out_csv: str):
 
 if __name__ == "__main__":
     params = "../params/Params.yaml"
-    run_batch(params_path=params, n_cases=3, out_csv="results/1-3_healthy.csv")
+    run_batch(params_path=params, n_cases=14, out_csv="results/1-14_healthy.csv")
